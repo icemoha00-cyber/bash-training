@@ -1,2 +1,0 @@
-Ligne 1 : bonjour
-Ligne 2 : je pratique Bash

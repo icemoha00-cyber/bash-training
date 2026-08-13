@@ -9,8 +9,11 @@ jobs:
       - name: Récupérer le code
         uses: actions/checkout@v4
 
-      - name: Dire bonjour
-        run: echo "Bonjour depuis GitHub Actions !"
+      - name: Rendre le script exécutable
+        run: chmod +x deploy.sh
 
-      - name: Vérifier le fichier journal
-        run: cat journal.txt
+      - name: Lancer le déploiement
+        run: ./deploy.sh
+
+      - name: Afficher le log de déploiement
+        run: cat deploy.log

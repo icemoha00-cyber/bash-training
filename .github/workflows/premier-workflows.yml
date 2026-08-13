@@ -1,20 +1,16 @@
-name: Mon premier workflows
-
+name: Mon premier workflow
 
 on: [push]
 
-
 jobs:
-  teste-job:
-    run-on: unbuntu-latest
+  test-job:
+    runs-on: ubuntu-latest
     steps:
       - name: Récupérer le code
-        use: actions/checkout@v4
-
+        uses: actions/checkout@v4
 
       - name: Dire bonjour
-        run: echo"bonjour depuis Github actions !"
+        run: echo "Bonjour depuis GitHub Actions !"
 
-
-      - name: vérifier le fichier journal
+      - name: Vérifier le fichier journal
         run: cat journal.txt
